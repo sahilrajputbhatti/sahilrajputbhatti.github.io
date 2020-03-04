@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
-    <!-- Manifest -->
+    <!-- Manifest FILE HAS TO BE ON THE SAME SERVER TO BE ABLE TO CREATE PWK FOR CHROME, OTHERWISE ITS GOOD FOR CREATING JUSTSHORTCUTS FOR ALL BROWSERS -->
     <link rel="manifest" href="/tommy/manifest.json">
     <!-- INLING MANIFEST DOESN'T WORK <link rel="manifest" href='data:application/manifest+json,{ "short_name": "Weather", "name": "Weather - Do I need an umbrella?", "description": "Weather forecast information", "icons": [ { "src": "https://via.placeholder.com/48", "sizes": "48x48", "type": "image/png" }, { "src": "https://via.placeholder.com/72", "sizes": "72x72", "type": "image/png" }, { "src": "https://via.placeholder.com/96", "sizes": "96x96", "type": "image/png" }, { "src": "https://via.placeholder.com/144", "sizes": "144x144", "type": "image/png" }, { "src": "https://via.placeholder.com/192", "sizes": "192x192", "type": "image/png" }, { "src": "https://via.placeholder.com/512", "sizes": "512x512", "type": "image/png" } ], "start_url": "/", "background_color": "#3367D6", "display": "standalone", "scope": "/", "theme_color": "#3367D6" }'> -->
     <!-- INLING MANIFEST DOESN'T WORK <meta name="manifest" content='{ "short_name": "Weather", "name": "Weather - Do I need an umbrella?", "description": "Weather forecast information", "icons": [ { "src": "https://via.placeholder.com/48", "sizes": "48x48", "type": "image/png" }, { "src": "https://via.placeholder.com/72", "sizes": "72x72", "type": "image/png" }, { "src": "https://via.placeholder.com/96", "sizes": "96x96", "type": "image/png" }, { "src": "https://via.placeholder.com/144", "sizes": "144x144", "type": "image/png" }, { "src": "https://via.placeholder.com/192", "sizes": "192x192", "type": "image/png" }, { "src": "https://via.placeholder.com/512", "sizes": "512x512", "type": "image/png" } ], "start_url": "/", "background_color": "#3367D6", "display": "standalone", "scope": "/", "theme_color": "#3367D6" }'> -->
@@ -34,7 +34,8 @@ const butInstall = document.getElementById('butInstall');
 
 /* Only register a service worker if it's supported */
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js');
+  navigator.serviceWorker.register('https://chetanmishra8660.github.io/service-worker.js');
+  // navigator.serviceWorker.register('/service-worker.js');
 }
 
 /**
