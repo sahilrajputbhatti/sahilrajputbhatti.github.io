@@ -37,7 +37,7 @@ const butInstall = document.getElementById('butInstall');
 if ('serviceWorker' in navigator) {
   // SERVICE WORKER FROM SOME OTHER DOMAIN WILL STILL BE A PROBLEM. WEBAPK: NO, WEBAPP SHORTCUT: YES
   // navigator.serviceWorker.register('https://chetanmishra8660.github.io/service-worker.js');
-  // navigator.serviceWorker.register('/tommy/service-worker.js');
+  navigator.serviceWorker.register('/service-worker.js');
 }
 
 /**
