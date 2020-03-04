@@ -26,13 +26,21 @@
     <!--WebPage's Script -->
      <!-- <script src="/script.js" defer></script> -->
      <script>
-       const divInstall = document.getElementById('installContainer');
-const butInstall = document.getElementById('butInstall');
+      const divInstall = document.getElementById('installContainer');
+      const butInstall = document.getElementById('butInstall');
 
 /* Put code here */
+// boom tam tam down
 
+window.addEventListener('beforeinstallprompt', (event) => {
+  console.log('👍', 'beforeinstallprompt', event);
+  // Stash the event so it can be triggered later.
+  window.deferredPrompt = event;
+  // Remove the 'hidden' class from the install button container
+  divInstall.classList.toggle('hidden', false);
+});
 
-
+// boomtamtam up
 /* Only register a service worker if it's supported */
 if ('serviceWorker' in navigator) {
   // SERVICE WORKER FROM SOME OTHER DOMAIN WILL STILL BE A PROBLEM. WEBAPK: NO, WEBAPP SHORTCUT: YES
