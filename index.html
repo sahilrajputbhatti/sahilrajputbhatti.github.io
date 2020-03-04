@@ -36,6 +36,11 @@ window.addEventListener('beforeinstallprompt', (event) => {
   console.log('👍', 'beforeinstallprompt', event);
   // Stash the event so it can be triggered later.
   window.deferredPrompt = event;
+  // BOOM => FOR INSTANTLY ASKING FOR ADDING THE ADD TO MOBILE/DESKTOP
+  window.deferredPrompt.prompt()
+  // booM ^^ FOR INSTANTLY ASKING FOR ADDING THE ADD TO MOBILE/DESKTOP
+
+
   // Remove the 'hidden' class from the install button container
   divInstall.classList.toggle('hidden', false);
 });
